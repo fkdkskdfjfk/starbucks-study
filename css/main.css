@@ -107,4 +107,9 @@ header .sub-menu .search .material-icons {
   bottom: 0;
   right: 5px;
   margin: auto;
+  transition: 0.4s;
 } 
+header .sub-menu .search.focused .material-icons {
+  /* 검색창 포커스 시 검색 아이콘 투명화 */
+  opacity: 0;
+}

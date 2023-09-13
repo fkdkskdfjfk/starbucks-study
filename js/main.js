@@ -10,3 +10,16 @@ searchEl.addEventListener('click', function () {
   searchInputEl.focus(); // 포커스 강제 적용
 });
 
+// input 요소에 포커스되면 실행
+searchInputEl.addEventListener('focus', function() {
+  searchEl.classList.add('focused');
+  // HTML 속성을 추가하는 메소드
+  searchInputEl.setAttribute('placeholder', '통합검색'); 
+})
+
+// input 요소에 포커스가 해제(블러)되면 실행
+searchInputEl.addEventListener('blur', function() {
+  searchEl.classList.remove('focused');
+  searchInputEl.setAttribute('placeholder', ''); 
+})
+
