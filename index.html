@@ -48,10 +48,41 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  폰트 테스트
+  <!-- HEADER -->
+  <header>
+    <!-- .inner: 내용을 가운데 정렬하는 용도 -->
+    <div class="inner">
+      <!-- 로고를 클릭하면 메인 페이지로 이동하도록 절대경로 "/" 추가 -->
+      <a href="/" class="logo">
+        <img src="./images/starbucks_logo.png" alt="STARBUCKS">
+      </a>
 
-  <span class="material-icons">
-    login
-    </span>
+      <!-- 서브 메뉴(헤더 오른쪽 상단) -->
+      <div class="sub-menu">
+        <!-- 메뉴 아이템 -->
+        <ul class="menu">
+          <li>
+            <a href="/signin">Sign In</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">My Starbucks</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Customer Service & Ideas</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Find a Store</a>
+          </li>
+        </ul>
+
+        <!-- 검색 영역 -->
+        <div class="search">
+          <input type="text">
+          <span class="material-icons">search</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
 </body>
 </html>

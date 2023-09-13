@@ -1,3 +1,62 @@
+/* COMMON */
 body {
   font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  /* 위 속성들은 모두 상속되기에 전체 스타일을 한 번에 재어 */
+
+  overflow-x: hidden;
+}
+
+a {
+  /* 밑줄 제거 */
+  text-decoration: none;
+}
+
+.inner {
+  /* 가로 너비를 가진 블록 요소에 margin: 0 auto; 를 줄 경우, 부모 범위 안에서 가운데 정렬 */
+  max-width: 1100px;  /* 반응형 작업을 위해 */
+  margin: 0 auto;
+  position: relative; /* inner div 기준으로 내부 요소를 배치하기 위해 */
+}
+
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+header > .inner {
+  background-color: orange;
+  height: 120px;
+}
+header .logo {
+  /* 로고의 수직 가운데 배치 */
+  position: absolute;
+  height: 75px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  /* 자식 요소(메뉴와 검색 영역)를 수평 배치 */
+  display: flex;
+}
+header .sub-menu ul.menu {
+  /* 메뉴 아이템들(li)을 수평 배치 */
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+header .sub-menu ul.menu li a {
+  display: block; /* 상하 여백 적용을 위해 변경 */
+  padding: 11px, 16px; /* 클릭할 수 있는 영역을 넓혀줌 */
+  font-size: 13px;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
 }
