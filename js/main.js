@@ -23,3 +23,21 @@ searchInputEl.addEventListener('blur', function() {
   searchInputEl.setAttribute('placeholder', ''); 
 })
 
+// 스크롤 시 전역 배지(고정 배너) 숨기기
+// 페이지 스크롤에 따른 요소 제어
+const badgeEl = document.querySelector('header .badges');
+
+// 페이지에 스크롤 이벤트를 추가!
+// window: 브라우저 창 객체
+window.addEventListener('scroll', function() {
+  // console.log(window.scrollY); // y축으로 얼마나 스크롤 했는지 페이지 스크롤 위치
+
+  // Quiz:
+  // 페이지 스크롤 위치가 500px을 넘으면 배지 요소를 숨기고
+  // 페이지 스크롤 위치가 500px을 넘지 않으면 배지 요소 보이기!
+  if (window.scrollY > 500) {
+    badgeEl.style.display = 'none';
+  } else {
+    badgeEl.style.display = 'block';  
+  }
+})
