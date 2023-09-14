@@ -110,13 +110,16 @@ const promotionToggleIcon = promotionToggleBtn.querySelector('.material-icons');
 // 그렇지 않으면 숨김 처리!('hide' 클래스를 추가하고 아이콘 모양을 'download'로 설정)
 
 promotionToggleBtn.addEventListener('click', function() {
-  
+  //  실행할 코드들
   if (promotionEl.classList.contains('hide')) {
+    // 보임 처리!
     promotionEl.classList.remove('hide');
-    promotionToggleIcon.textContent = 'upload';
+    promotionToggleIcon.textContent = 'upload'; // 아이콘 모양 바꾸기
   } else {
     promotionEl.classList.add('hide');
     promotionToggleIcon.textContent = 'download' ;
     }
 });
+
+
   
