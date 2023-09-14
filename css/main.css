@@ -431,3 +431,35 @@ header .badges .badge {
 .promotion .swiper-pagination .swiper-pagination-bullet-active {
   background-image: url(../images/promotion_slide_pager_on.png);
 }
+.promotion .swiper-button-prev,
+.promotion .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  color: #333;
+  transition: 0.4s;
+}
+.promotion .swiper-button-prev {
+  /* 가운데로 몰아넣고 마진으로 위치 조정 */
+  left: 50%;
+  margin-left: -480px;
+}
+.promotion .swiper-button-next {
+  /* 가운데로 몰아넣고 마진으로 위치 조정 */
+  right: 50%;
+  margin-right: -480px;
+}
+
+.promotion .swiper-button-prev:hover,
+.promotion .swiper-button-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+.promotion .swiper-button-prev::after,
+.promotion .swiper-button-next::after {
+  display: none;
+}
