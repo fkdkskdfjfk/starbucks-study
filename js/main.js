@@ -98,3 +98,25 @@ new Swiper('.promotion .swiper', {
     prevEl: '.promotion .swiper-button-prev'// 다음 버튼 요소
   }
 });
+
+// 프로모션 섹션 토글 기능
+const promotionEl = document.querySelector('section.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+const promotionToggleIcon = promotionToggleBtn.querySelector('.material-icons');
+
+// Quiz
+// 토글 버튼을 클릭했을 때 아래 기능을 실행
+// 프로모션 요소에 'hide'라는 클래스 값이 있으면 보임 처리!('hide' 클래스를 제거하고 아이콘 모양을 'upload'로 설정)
+// 그렇지 않으면 숨김 처리!('hide' 클래스를 추가하고 아이콘 모양을 'download'로 설정)
+
+promotionToggleBtn.addEventListener('click', function() {
+  
+  if (promotionEl.classList.contains('hide')) {
+    promotionEl.classList.remove('hide');
+    promotionToggleIcon.textContent = 'upload';
+  } else {
+    promotionEl.classList.add('hide');
+    promotionToggleIcon.textContent = 'download' ;
+    }
+});
+  
