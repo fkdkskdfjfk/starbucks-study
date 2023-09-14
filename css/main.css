@@ -312,3 +312,75 @@ header .badges .badge {
   /* 투명한 상태에서 시작되도록 세팅 */
   opacity: 0;
 }
+
+/* NOTICE */
+.notice {
+  position: relative;
+}
+.notice .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.notice .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.notice .inner {
+  height: 62px;
+  /* border: 5px solid red; */
+  display: flex;
+}
+.notice .inner__left {
+  /* 비율 나누기 */
+  /* width: 70%; */
+  flex: 7;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+.notice .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.notice .inner__left .swiper {
+  /* background-color: orange; */
+  height: 62px;
+  flex-grow: 1; /* 최대한 늘어나도록 지정 */
+}
+.notice .inner__left .swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+}
+.notice .inner__left .swiper .swiper-slide a {
+  color: #fff;
+}
+
+.notice .inner__left .notice-more {
+  width: 62px;
+  height: 62px;
+  /* 정중앙 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .inner__left .notice-more .material-icons {
+  color: #fff;
+  font-size: 30px;
+}
+
+
+.notice .inner__right {
+  /* 비율 나누기 */
+  /* width: 30%; */
+  flex: 3;
+}
