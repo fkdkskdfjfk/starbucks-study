@@ -27,6 +27,13 @@ function onYouTubeIframeAPIReady() { // 라이브러리가 이 함수의 이름�
     events: {
       // 'onReady': onPlayerReady,
       // 'onStateChange': onPlayerStateChange
+
+      // 영상이 준비되었을 때 내가 작성한 함수를 실행
+      onReady: function (event) {
+        // event.target: 재생되고 있는 영상 자체
+        event.target.mute(); // 음소거
+        
+      }
     }
   });
 }
