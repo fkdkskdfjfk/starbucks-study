@@ -27,6 +27,14 @@ searchInputEl.addEventListener('blur', function() {
 // 페이지 스크롤에 따른 요소 제어
 const badgeEl = document.querySelector('header .badges');
 
+// 페이지 최상단으로 이동
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, 0.6, {
+    scrollTo: 0 // 페이지의 0px 지점(최상단)으로 이동, ScrollTOPlugin을 연결해야 사용 가능한 옵션
+  });
+});
+
 // 페이지에 스크롤 이벤트를 추가!
 // window: 브라우저 창 객체
 window.addEventListener('scroll', function() {
@@ -44,11 +52,23 @@ window.addEventListener('scroll', function() {
       opacity: 0,
       display: 'none'
     });
+
+    // 상단으로 이동 버튼 보이기!
+    gsap.to(toTopEl, 0.6, {
+      opacity: 1,
+      x: 0 // x축으로 0px 지점으로 이동(제자리)
+    });
   } else {
     // badgeEl.style.display = 'block';  
     gsap.to(badgeEl, 0.6, {
       opacity: 1,
       display: 'block'
+    });
+
+    // 상단으로 이동 버튼 숨기기!
+    gsap.to(toTopEl, 0.6, {
+      opacity: 0,
+      x: 100 // x축으로 100px 지점으로 이동
     });
   }
 });
@@ -169,3 +189,8 @@ new Swiper('.awards .swiper', {
     prevEl: '.awards .swiper-button-prev'// 다음 버튼 요소
   }
 });
+
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체를 활용(JS 기본 제공 객체)
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 현재 연도의 정보가 숫자 데이터로 반환됨
