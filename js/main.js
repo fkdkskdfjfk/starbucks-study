@@ -157,3 +157,15 @@ spyEls.forEach(function (spyEl) {
   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
   .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당(필수!)
 });
+
+// 어워즈 섹션 슬라이드 기능
+new Swiper('.awards .swiper', {
+  loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 4 -> 다시 1
+  autoplay: true, 
+  slidesPerView: 5, // 한번에 보여줄 슬라이드 개수(기본값: 1)
+  spaceBetween: 30, // 슬라이드 사이 여백(간격) px
+  navigation: { // 슬라이드 이전/다음 버튼 사용
+    nextEl: '.awards .swiper-button-next', // 다음 버튼 요소
+    prevEl: '.awards .swiper-button-prev'// 다음 버튼 요소
+  }
+});
