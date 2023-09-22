@@ -1,6 +1,6 @@
 html {
   /* 스크롤 이동을 부드럽게 */
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 /* COMMON */
@@ -103,15 +103,14 @@ img {
   transform: translateX(0);
 }
 .show .back-to-position.delay-1 {
-  transition-delay: 0.3;
+  transition-delay: 0.3s;
 }
 .show .back-to-position.delay-2 {
-  transition-delay: 0.6;
+  transition-delay: 0.6s;
 }
 .show .back-to-position.delay-3 {
-  transition-delay: 0.9;
+  transition-delay: 0.9s;
 }
-
 
 /* HEADER */
 header {
@@ -398,7 +397,6 @@ header .badges .badge {
 .notice .inner__left .swiper .swiper-slide a {
   color: #fff;
 }
-
 .notice .inner__left .notice-more {
   width: 62px;
   height: 62px;
@@ -447,8 +445,9 @@ header .badges .badge {
   transition: height 0.4s;
 }
 .promotion.hide {
-  /* display 속성을 사용하면 애니메이션 효과 못 넣음!!
-    (none -> block 될 때 중간 과정이 없기 때문에) */
+  /* display 속성을 사용하면 애니메이션 효과 못넣음!!
+    (none -> block 될 때 중간 과정이 없기 때문에)
+  */
   /* display: none; */
   height: 0;
 }
@@ -459,7 +458,7 @@ header .badges .badge {
   flex-shrink: 0;
 }
 .promotion .swiper-slide {
-  /* 모든 슬라이드를 반투명하게, active한 것만 불투명하게 
+  /* 모든 슬라이드는 반투명하게, active 한 것만 불투명하게
     => 개발자 도구로 클래스값 확인
   */
   opacity: 0.5;
@@ -485,12 +484,12 @@ header .badges .badge {
 .promotion .swiper-pagination .swiper-pagination-bullet {
   /* 기존 배경색은 투명하게 숨기고, 배경 이미지를 사용 */
   background-color: transparent;
-  background-image: url(../images/promotion_slide_pager.png);
+  background-image: url("../images/promotion_slide_pager.png");
   width: 13px;
   height: 12px;
 }
 .promotion .swiper-pagination .swiper-pagination-bullet-active {
-  background-image: url(../images/promotion_slide_pager_on.png);
+  background-image: url("../images/promotion_slide_pager_on.png");
 }
 .promotion .swiper-button-prev,
 .promotion .swiper-button-next {
@@ -514,7 +513,6 @@ header .badges .badge {
   right: 50%;
   margin-right: -480px;
 }
-
 .promotion .swiper-button-prev:hover,
 .promotion .swiper-button-next:hover {
   background-color: #333;
@@ -565,8 +563,6 @@ header .badges .badge {
 }
 .rewards .btn-group .btn.gift {
   margin-top: 10px;
-  /* width: 100%; */
-  /* flex: 1; */
   flex-grow: 1; /* Flex Container 내부에서 최대한의 너비를 쓸 수 있도록 */
 }
 
@@ -576,9 +572,9 @@ header .badges .badge {
   height: 700px;
   background-color: #333;
   /* 영상 출력 넘치는 부분 숨기기 */
-  overflow: hidden; 
+  overflow: hidden;
 
-  /* 정가운데 배치 방법 3번째 */
+  /* 정가운데 배치 방법3 */
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -588,7 +584,7 @@ header .badges .badge {
   width: 1920px;
   height: 1080px;
   /* background-color: orange; */
-  
+
   /* 정가운데 배치하는 기술들(3가지) */
   position: absolute;
 
@@ -608,17 +604,17 @@ header .badges .badge {
   right: 0;
   margin: auto; */
 
-  /* 중복 스타일은 변수로 선언 */
+  /* 중복 스타일 변수로 선언 */
   /* 
     너비, 높이를 수정할 경우 총 4곳 수정 필요 => CSS 변수 선언으로 재사용
-    2개의 대시(--) 기호로 시작하고 원하는 변수명 지정: CSS값
+    2개의 대시(--)기호로 시작하고 원하는 변수명 지정: CSS값
     선언된 변수는 CSS var() 함수를 통해 사용
 
     활용 예: 주로 색상 지정 시 사용
   */
   /* 
     주의! 자신이 선언된 선택자와 그 하위 요소에서만 유효
-    전역 변수로 사용하고 싶으면, 
+    전역 변수로 사용하고 싶으면,
     html {
       --error: red;
     }
@@ -630,15 +626,15 @@ header .badges .badge {
   --height: 1080px;
   width: var(--width);
   height: var(--height);
-  margin-left: var(--width / -2);
-  margin-top: var(--height / -2);
+  margin-left: calc(var(--width) / -2);
+  margin-top: calc(var(--height) / -2);
 }
 #player {
   width: 100%;
   height: 100%;
 }
 .youtube .youtube__cover {
-  /* 화면 전체를 다 덮고 싶을 때 */
+  /* 화면 전체를 다 덮고 싶을때 */
   /* position: fixed;
   z-index: 99; */
   position: absolute;
@@ -647,32 +643,31 @@ header .badges .badge {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: url(../images/video_cover_pattern.png);
+  background-image: url("../images/video_cover_pattern.png");
 }
 .youtube .inner {
   height: 100%;
   /* background-color: royalblue; */
 }
 .youtube .floating1 {
- position: absolute; 
- top: 50px;
- left: 0;
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
 .youtube .floating2 {
- position: absolute; 
- top: 350px;
- left: 150px;
+  position: absolute;
+  top: 350px;
+  left: 150px;
 }
-/* .youtube에 overflow:hidden을 줘서 잘림 */
 /* .youtube .floating3 {
- position: absolute; 
- bottom: -200px;
- right: 0;
+  position: absolute;
+  bottom: -200px;
+  right: 0;
 } */
 
 /* SEASON PRODUCT */
 .season-product {
-  background-image: url(../images/season_product_bg.jpg);
+  background-image: url("../images/season_product_bg.jpg");
 }
 .season-product .inner {
   height: 400px;
@@ -680,7 +675,7 @@ header .badges .badge {
 .season-product .floating3 {
   position: absolute;
   top: -200px;
-  right: 0 ;
+  right: 0;
 }
 .season-product .text-group {
   position: absolute;
@@ -696,7 +691,7 @@ header .badges .badge {
 
 /* RESERVE COFFEE */
 .reserve-coffee {
-  background-image: url(../images/reserve_bg.jpg);
+  background-image: url("../images/reserve_bg.jpg");
 }
 .reserve-coffee .inner {
   height: 400px;
@@ -719,7 +714,7 @@ header .badges .badge {
 
 /* PICK YOUR FAVORITE */
 .pick-your-favorite {
-  background-image: url(../images/favorite_bg.jpg);
+  background-image: url("../images/favorite_bg.jpg");
   /* 배경 이미지에 시차 효과(Parallax) 주기 */
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -747,7 +742,7 @@ header .badges .badge {
 
 /* RESERVE STORE */
 .reserve-store {
-  background-image: url(../images/reserve_store_bg.jpg);
+  background-image: url("../images/reserve_store_bg.jpg");
   /* 배경 이미지에 시차 효과(Parallax) 주기 */
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -769,7 +764,7 @@ header .badges .badge {
 .reserve-store .medal .front,
 .reserve-store .medal .back {
   position: absolute;
-  backface-visibility: hidden;  /* 회전된 요소의 뒷면을 숨김 */
+  backface-visibility: hidden; /* 회전된 요소의 뒷면을 숨김 */
   transition: 1s;
 }
 .reserve-store .medal .front {
@@ -779,7 +774,7 @@ header .badges .badge {
   transform: rotateY(180deg);
 }
 .reserve-store .medal .back {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .reserve-store .medal:hover .back {
   transform: rotateY(0deg);
@@ -792,10 +787,9 @@ header .badges .badge {
   margin: auto;
 }
 
-
 /* FIND STORE */
 .find-store {
-  background-image: url(../images/find_store_bg.jpg);
+  background-image: url("../images/find_store_bg.jpg");
 }
 .find-store .inner {
   height: 400px;
@@ -817,7 +811,6 @@ header .badges .badge {
   border-radius: 50%;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
 }
-
 .find-store .picture2 {
   position: absolute;
   top: 150px;
@@ -857,9 +850,8 @@ header .badges .badge {
   color: #fff;
   opacity: 0.3;
   position: absolute;
-  transition: .4s;
+  transition: 0.4s;
 }
-
 .awards .swiper-button-prev {
   left: -100px;
 }
@@ -884,11 +876,11 @@ footer {
 footer .inner {
   padding: 40px 0 60px;
 }
-footer .inner .menu {
+footer .menu {
   display: flex;
   justify-content: center;
-} 
-footer .inner .menu li {
+}
+footer .menu li {
   position: relative;
 }
 footer .menu li::before {
@@ -915,11 +907,12 @@ footer .menu li a {
 footer .menu li a.green {
   color: #690;
 }
+
 footer .btn-group {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  column-gap: 10px;
+  /* column-gap: 10px; */
 }
 footer .btn-group .btn {
   font-size: 12px;
@@ -946,6 +939,7 @@ footer .copyright {
   text-align: center;
   margin-top: 12px;
 }
+
 footer .logo {
   margin: 30px auto 0;
 }
@@ -967,24 +961,4 @@ footer .logo {
   right: 30px;
   z-index: 9;
   opacity: 0;
-}
-
-
-/* 반응형 실습 */
-@media screen and (max-width: 960px) {
-  .season-product .inner {
-    height: 700px;
-  }
-  .season-product .product {
-    margin: 0 auto;
-  }
-  .season-product .text-group {
-    top: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 중앙 정렬 */
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
