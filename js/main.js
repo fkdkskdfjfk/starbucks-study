@@ -76,7 +76,7 @@ window.addEventListener('scroll', function() {
 // 순차적으로 VUSUAL 섹션 내 요소 보이기
 // 나타날 요소(.fade-in)들을 찾기
 const fadeEls = document.querySelectorAll('.visual .fade-in');
-console.log(fadeEls);
+// console.log(fadeEls);
 // 요소들을 하나씩 반복해서 처리!
 fadeEls.forEach(function (fadeEl, index) {
   // gsap.to(요소, 지속시간, 옵션: {})
