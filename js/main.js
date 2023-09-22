@@ -82,7 +82,7 @@ fadeEls.forEach(function (fadeEl, index) {
   // gsap.to(요소, 지속시간, 옵션: {})
   gsap.to(fadeEl, 1, {
     opacity: 1,
-    delay: (index + 1) * 0.7  // 0.7s, 1.4s, 2.1s, 2.8s
+    delay: (index + 1) * 2.7  // 0.7s, 1.4s, 2.1s, 2.8s
     // delay: 몇 초 뒤에 실행될 것인가?
   });
 });
@@ -171,7 +171,7 @@ gsap.to('.floating3', 2.5, {
 const spyEls = document.querySelectorAll('section.scroll-spy');
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({ // 감시할 장면(Scene) 추가 및 옵션 지정
-    triggerElenment: spyEl, // 보여짐 여부를 감시할 요소를 지정
+    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
     triggerHook: 0.8 // 화면의 80% 지점에서 보여짐 여부 감시(0~1사이 지정)
   })
   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
