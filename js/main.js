@@ -192,3 +192,13 @@ new Swiper('.awards .swiper', {
 // 날짜 정보를 가진 JS의 Date 객체를 활용(JS 기본 제공 객체)
 const thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear(); // 현재 연도의 정보가 숫자 데이터로 반환됨
+
+// 카피라이트
+
+const copyEl = document.querySelector('.copyright a');
+const aniEl = document.querySelector('#dung');
+
+copyEl.addEventListener('click', function () {
+  aniEl.style.display = 'block';
+
+});
